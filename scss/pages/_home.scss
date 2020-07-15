@@ -1,0 +1,245 @@
+/*================Home Page CSS===============*/
+
+
+// .homepage-slides-wrapper{
+//     height: 700px;
+//     background-color: black;
+//     .single-watch {
+//         flex-basis: 200px;
+//         padding: 0 30px;
+//         img {
+//             max-width: 200px;
+//         }
+//     }
+//     .content h2 {
+//         color: #fff;
+//         font-size: 50px;
+//     }
+// }
+
+.homepage-slides-area{
+    background-color: #000;
+    .owl-carousel .owl-item img {
+        width: auto;
+    }
+
+    .slide-content {
+        height: 500px;
+    }
+    .content{
+        color: #fff;
+        font-size: 18px;
+        padding: 0 50px;
+        .boxed-btn{
+            margin-top: 20px;
+        }
+    }
+    .slide-content .left {
+        background: #16161A;
+    }
+    
+    .single-slide-item {
+        padding: 100px 0;
+    }
+    .content h4 {
+        color: #F85620;
+        font-size: 20px;
+        font-weight: normal;
+        margin-bottom: 10px;
+    }
+    
+    .content h2 {
+        font-size: 50px;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+    
+    .price-tag {
+        color: #F85620;
+        font-size: 26px;
+        font-weight: 700;
+        margin-right: 5px;
+    }
+}
+
+
+.single-featured-item {
+    padding: 30px;
+    box-shadow: 0px 0px 20px -11px rgba(0, 0, 0, 0.5);   
+    // &:hover{
+    //     box-shadow: 0px 0px 14px 2px rgba(0,0,0,0.61);    
+    //     border: 1 solid transparent;
+    // }
+}
+.single-featured-item img {
+    max-width: 200px;
+}
+
+.single-featured-item {
+    margin-bottom: 30px;
+    min-height: 340px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.single-featured-item:after {
+    position: absolute;
+    left: -350px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    content: "";
+    opacity: .7;
+    transition: .5s;
+}
+
+.single-featured-item:hover:after {
+    left: 0;
+}
+.hover-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 3;
+    margin-left: -175px;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+    padding: 0 30px;
+}
+
+.hover-content h3 {
+    color: #F85620;
+    margin-bottom: 12px;
+}
+
+.single-featured-item:hover .hover-content {
+    opacity: 1;
+    visibility: visible;
+    margin-left: 0;
+}
+
+.hover-content .boxed-btn {
+    padding: 12px 35px;
+}
+
+.hover-content .boxed-btn:hover:after {
+    background: #fff;
+}
+.hover-content .price-tag {
+    display: block;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.hover-content .boxed-btn:hover {
+    color: #000;
+}
+
+.single-app-feature {
+    width: 16%;
+    background: #66A3F4;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 8px;
+    min-height: 150px;
+    color: #fff;
+}
+
+.single-app-feature .icon {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #f0f0f0;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    transition: .5s;
+}
+
+.single-app-feature:hover .icon {
+    background: #F85620;
+    border-color: #F85620;
+}
+
+.app-features {
+    justify-content: space-between;
+}
+
+// .about-us-video-area
+.video-area {
+    @extend %backgroundimage;
+    background-attachment: fixed;
+    height: 550px;
+    @extend %zindex2;
+    @include all-below-med{
+        height: 400px;
+    }
+    @include all-below-mobile-lg{
+        height: 270px;
+    }
+    a{
+        @extend %primary-color;  
+        &:hover{
+            @extend %primary-bg-color;  
+            @extend %primary-border-color;  
+            @extend %white-color;  
+        } 
+    }
+    &:after {
+        @extend %pseudo;
+        left: 0;
+        top: 0;
+        @extend %w100;
+        @extend %h100;
+        @extend %black-bg-color;
+        z-index: -1;
+        opacity: .7;
+    }
+}
+
+
+// video-icon
+.video-icon {
+    width: 90px;
+    height: 90px;
+    @extend %black-bg-color;
+    @extend %secondary-color;
+    text-align: center;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    line-height: 84px;
+    font-size: 30px;
+    padding-left: 6px;
+    @extend %cursorpointer;
+    @extend %posabsolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 50%;
+    margin-top: -45px;
+    @extend %basetransition2;
+    @include all-below-mobile-lg{
+        width: 50px;
+        height: 50px;
+        border: 2px solid #fff;
+        line-height: 48px;
+        font-size: 20px;
+        margin-top: 20px;
+        padding-left: 3px;
+    }
+    // &:hover {
+    //     @extend %secondary-bg-color;
+    //     @extend %secondary-border-color;
+    //     @extend %black-color;
+    // }
+}
